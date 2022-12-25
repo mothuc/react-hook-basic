@@ -1,10 +1,17 @@
-import logo from "./logo.svg";
-import "./App.scss";
+import React, { useState } from "react";
+import './App.scss'
+import Hero from "./components/Hero";
+ 
 
 function App() {
-  return (
+  
+  const [count , setCount] = useState(0)
+   return (
     <div className="app">
-      <h1>Welcome</h1>
+      <h1>React hooks - Postlist</h1>
+      <p>{count}</p>
+      <button onClick={() => setCount(count + 1)}>Increase</button>
+      <Hero name='Hello Mr Thuc' />
     </div>
   );
 }
